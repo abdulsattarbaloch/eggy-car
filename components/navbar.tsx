@@ -1,4 +1,5 @@
 import { Car } from "lucide-react";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
@@ -8,35 +9,35 @@ export default function Navbar() {
           <div className="w-10 h-10 bg-gradient-to-br from-orange-400 to-red-500 rounded-lg flex items-center justify-center">
             <Car className="h-6 w-6 text-white" />
           </div>
-          <h1 className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+          <p className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
             Eggy Car
-          </h1>
+          </p>
         </div>
         <nav className="hidden md:flex items-center space-x-6">
-          <a
-            href="#game"
-            className="text-gray-600 hover:text-orange-600 transition-colors"
-          >
-            Play
-          </a>
-          <a
-            href="#features"
-            className="text-gray-600 hover:text-orange-600 transition-colors"
-          >
-            Features
-          </a>
-          <a
-            href="#cars"
-            className="text-gray-600 hover:text-orange-600 transition-colors"
-          >
-            Cars
-          </a>
-          <a
-            href="#about"
+          <Link
+            href="/about"
             className="text-gray-600 hover:text-orange-600 transition-colors"
           >
             About
-          </a>
+          </Link>
+          <Link
+            href="/faqs"
+            className="text-gray-600 hover:text-orange-600 transition-colors"
+          >
+            FAQs
+          </Link>
+          <Link
+            href="how-to-use"
+            className="text-gray-600 hover:text-orange-600 transition-colors"
+          >
+            How to use
+          </Link>
+          <Link
+            href="/contact"
+            className="text-gray-600 hover:text-orange-600 transition-colors"
+          >
+            Contact
+          </Link>
         </nav>
       </div>
     </header>
