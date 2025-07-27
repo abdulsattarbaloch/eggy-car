@@ -115,8 +115,8 @@ export default function FAQsPage() {
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
             Find answers to the most common questions about Eggy Car gameplay,
-            features, and troubleshooting. Can't find what you're looking for?
-            Let us know!
+            features, and troubleshooting. Can&apos;t find what you&apos;re
+            looking for? Let us know!
           </p>
         </section>
 
@@ -181,8 +181,8 @@ export default function FAQsPage() {
               <CardContent>
                 <p className="text-gray-600">
                   When the egg falls off your car or breaks, the game ends and
-                  you'll see your final distance. Don't worry - you can
-                  immediately start a new run and try to beat your previous
+                  you&apos;ll see your final distance. Don&apos;t worry - you
+                  can immediately start a new run and try to beat your previous
                   record!
                 </p>
               </CardContent>
@@ -209,7 +209,7 @@ export default function FAQsPage() {
               <CardHeader>
                 <CardTitle className="text-xl flex items-center space-x-2">
                   <HelpCircle className="h-5 w-5 text-orange-600" />
-                  <span>What's the Freeze Power-Up?</span>
+                  <span>What&apos;s the Freeze Power-Up?</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -278,7 +278,7 @@ export default function FAQsPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  No, once you unlock a car, it's yours permanently! Your
+                  No, once you unlock a car, it&apos;s yours permanently! Your
                   progress is saved locally in your browser. However, clearing
                   your browser data will reset your progress, so be careful when
                   clearing cookies and local storage.
@@ -345,8 +345,8 @@ export default function FAQsPage() {
               <CardContent>
                 <p className="text-gray-600">
                   Once the game has loaded completely, you can play offline for
-                  that session. However, you'll need an internet connection to
-                  load the game initially and to save your progress. We
+                  that session. However, you&apos;ll need an internet connection
+                  to load the game initially and to save your progress. We
                   recommend staying connected for the best experience.
                 </p>
               </CardContent>
@@ -387,7 +387,7 @@ export default function FAQsPage() {
               <CardHeader>
                 <CardTitle className="text-xl flex items-center space-x-2">
                   <HelpCircle className="h-5 w-5 text-orange-600" />
-                  <span>What's the current world record?</span>
+                  <span>What&apos;s the current world record?</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -412,7 +412,7 @@ export default function FAQsPage() {
                   Distance is measured in meters from your starting point. The
                   counter increases as you move forward, and your final distance
                   is recorded when the egg falls off or breaks. Moving backward
-                  doesn't decrease your maximum distance reached.
+                  doesn&apos;t decrease your maximum distance reached.
                 </p>
               </CardContent>
             </Card>
@@ -426,10 +426,10 @@ export default function FAQsPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Coins don't directly affect your distance score, but they're
-                  essential for unlocking new cars. Some cars might help you
-                  achieve better distances, so collecting coins is still
-                  important for improving your overall performance!
+                  Coins don&apos;t directly affect your distance score, but
+                  they&apos;re essential for unlocking new cars. Some cars might
+                  help you achieve better distances, so collecting coins is
+                  still important for improving your overall performance!
                 </p>
               </CardContent>
             </Card>
@@ -464,14 +464,15 @@ export default function FAQsPage() {
                 Still Need Help?
               </CardTitle>
               <CardDescription className="text-lg text-gray-600">
-                Can't find the answer you're looking for? We're here to help!
+                Can&apos;t find the answer you&apos;re looking for? We&apos;re
+                here to help!
               </CardDescription>
             </CardHeader>
             <CardContent className="text-center">
               <p className="text-gray-600 mb-6">
-                If your question isn't answered here, feel free to reach out to
-                us. We're always happy to help players get the most out of their
-                Eggy Car experience.
+                If your question isn&apos;t answered here, feel free to reach
+                out to us. We&apos;re always happy to help players get the most
+                out of their Eggy Car experience.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
