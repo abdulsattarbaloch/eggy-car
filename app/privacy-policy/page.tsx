@@ -1,12 +1,12 @@
 // privacy-policy/page.tsx
-import { Metadata } from "next";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import { Car, Shield, Eye, Database, Lock, Users, Mail } from "lucide-react";
-import Link from "next/link";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { Database, Eye, Lock, Mail, Shield } from "lucide-react";
+import { Metadata } from "next";
+import Link from "next/link";
 
 // SEO Metadata
 export const metadata: Metadata = {
@@ -294,7 +294,7 @@ export default function PrivacyPolicyPage() {
             <CardContent>
               <p className="text-gray-600 mb-6">
                 You have several rights regarding your personal information and
-                how it's used:
+                how it&apos;s used:
               </p>
 
               <div className="grid md:grid-cols-2 gap-6">
@@ -318,7 +318,7 @@ export default function PrivacyPolicyPage() {
                   </h4>
                   <ul className="space-y-2 text-gray-600 text-sm">
                     <li>• Use incognito/private browsing mode</li>
-                    <li>• Enable "Do Not Track" in your browser</li>
+                    <li>• Enable &apos;Do Not Track&apos; in your browser</li>
                     <li>• Use ad blockers (may affect game functionality)</li>
                     <li>• Contact us for specific privacy concerns</li>
                   </ul>
@@ -334,7 +334,7 @@ export default function PrivacyPolicyPage() {
             <Card className="bg-white/60 backdrop-blur-sm border border-orange-100">
               <CardHeader>
                 <CardTitle className="text-xl text-gray-800">
-                  Children's Privacy
+                  Children&apos;s Privacy
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -397,8 +397,8 @@ export default function PrivacyPolicyPage() {
                   </h4>
                   <p className="text-gray-600 text-sm">
                     When we make significant changes, we will notify users
-                    through the game interface or by updating the "Last updated"
-                    date at the top of this policy.
+                    through the game interface or by updating the &apos;Last
+                    updated&apos; date at the top of this policy.
                   </p>
                 </div>
 
@@ -433,7 +433,7 @@ export default function PrivacyPolicyPage() {
             <CardContent>
               <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
                 If you have any questions about this privacy policy, our data
-                practices, or your privacy rights, please don't hesitate to
+                practices, or your privacy rights, please don&apos;t hesitate to
                 contact us.
               </p>
 

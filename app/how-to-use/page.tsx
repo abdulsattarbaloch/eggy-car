@@ -150,7 +150,7 @@ export default function HowToUsePage() {
                   </h4>
                   <p className="text-gray-600 text-sm">
                     Balance speed with caution. Go too fast and your egg breaks
-                    - too slow and you won't make it!
+                    - too slow and you won&apos;t make it!
                   </p>
                 </div>
               </div>
@@ -400,7 +400,7 @@ export default function HowToUsePage() {
                     <li>
                       • Land softly after jumps by controlling your descent
                     </li>
-                    <li>• Don't hit obstacles at high speeds</li>
+                    <li>• Don&apos;t hit obstacles at high speeds</li>
                     <li>• Keep the car level when possible</li>
                     <li>• Watch for fragile areas in your path</li>
                   </ul>
@@ -415,7 +415,7 @@ export default function HowToUsePage() {
                     <li>• Use hills to gain speed naturally</li>
                     <li>• Time your movements for maximum efficiency</li>
                     <li>• Practice levels to find the optimal path</li>
-                    <li>• Don't rush - patience often wins</li>
+                    <li>• Don&apos;t rush - patience often wins</li>
                   </ul>
                 </div>
 
@@ -544,8 +544,8 @@ export default function HowToUsePage() {
                       Going Too Fast
                     </h4>
                     <p className="text-gray-600 text-sm">
-                      Speed is exciting, but it's the #1 cause of egg-breaking.
-                      Take your time on tricky sections.
+                      Speed is exciting, but it&apos;s the #1 cause of
+                      egg-breaking. Take your time on tricky sections.
                     </p>
                   </div>
                 </div>

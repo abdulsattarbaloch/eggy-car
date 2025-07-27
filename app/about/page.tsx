@@ -1,5 +1,7 @@
 // about/page.tsx
-import { Metadata } from "next";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -8,22 +10,18 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import {
-  Car,
-  Trophy,
-  Target,
-  Gamepad2,
-  Star,
-  Users,
-  Heart,
-  Zap,
   ArrowLeft,
+  Gamepad2,
+  Heart,
+  Target,
+  Trophy,
+  Users,
+  Zap,
 } from "lucide-react";
+import { Metadata } from "next";
 import Link from "next/link";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
 
 // SEO Metadata
 export const metadata: Metadata = {
@@ -250,8 +248,8 @@ export default function AboutPage() {
                     </h4>
                     <p className="text-gray-600">
                       Every feature is evaluated through the lens of player
-                      enjoyment. If it doesn't make the game more fun, it
-                      doesn't make it into the game.
+                      enjoyment. If it doesn&apos;t make the game more fun, it
+                      doesn&apos;t make it into the game.
                     </p>
                   </div>
                 </div>
@@ -265,9 +263,9 @@ export default function AboutPage() {
                       Quality Over Quantity
                     </h4>
                     <p className="text-gray-600">
-                      We'd rather perfect one amazing game than create dozens of
-                      mediocre ones. Every element is carefully crafted and
-                      thoroughly tested.
+                      We&apos;d rather perfect one amazing game than create
+                      dozens of mediocre ones. Every element is carefully
+                      crafted and thoroughly tested.
                     </p>
                   </div>
                 </div>
@@ -342,7 +340,7 @@ export default function AboutPage() {
               The Road Ahead
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Eggy Car is just the beginning. We're constantly working on
+              Eggy Car is just the beginning. We&apos;re constantly working on
               updates, improvements, and new features based on your feedback.
               Our commitment is to keep the game fresh, challenging, and fun for
               years to come.
@@ -371,8 +369,8 @@ export default function AboutPage() {
           </h2>
           <p className="text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto">
             Have feedback, suggestions, or just want to share your high score?
-            We'd love to hear from you! Your input helps us make Eggy Car even
-            better.
+            We&apos;d love to hear from you! Your input helps us make Eggy Car
+            even better.
           </p>
           <p className="text-gray-600">
             Follow our development journey and connect with the community on

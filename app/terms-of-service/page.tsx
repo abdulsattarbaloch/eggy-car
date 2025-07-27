@@ -6,7 +6,6 @@ import { Separator } from "@/components/ui/separator";
 import {
   Car,
   FileText,
-  Scale,
   Shield,
   AlertCircle,
   Users,
@@ -204,7 +203,7 @@ export default function TermsOfServicePage() {
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-3 text-green-600">
+                  <h4 className="font-semibold  mb-3 text-green-600">
                     ✓ Encouraged Behavior
                   </h4>
                   <ul className="space-y-2 text-gray-600 text-sm">
@@ -217,7 +216,7 @@ export default function TermsOfServicePage() {
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-3 text-red-600">
+                  <h4 className="font-semibold mb-3 text-red-600">
                     ✗ Prohibited Behavior
                   </h4>
                   <ul className="space-y-2 text-gray-600 text-sm">
@@ -309,8 +308,8 @@ export default function TermsOfServicePage() {
                   </h4>
                   <p className="text-gray-600 text-sm">
                     We may temporarily suspend the game for maintenance,
-                    updates, or improvements. We'll try to minimize disruptions
-                    and notify players when possible.
+                    updates, or improvements. We&apos;ll try to minimize
+                    disruptions and notify players when possible.
                   </p>
                 </div>
 
@@ -347,9 +346,9 @@ export default function TermsOfServicePage() {
                   Disclaimer of Warranties
                 </h4>
                 <p className="text-gray-600 text-sm">
-                  Eggy Car is provided "as is" without warranties of any kind.
-                  We do not guarantee that the game will be error-free, secure,
-                  or continuously available.
+                  Eggy Car is provided &apos;as is&apos; without warranties of
+                  any kind. We do not guarantee that the game will be
+                  error-free, secure, or continuously available.
                 </p>
               </div>
 
@@ -448,8 +447,8 @@ export default function TermsOfServicePage() {
                   </h4>
                   <p className="text-gray-600 text-sm">
                     Significant changes will be communicated through the game
-                    interface or by updating the "Last updated" date. Minor
-                    changes may be made without notice.
+                    interface or by updating the &apos;Last updated&apos; date.
+                    Minor changes may be made without notice.
                   </p>
                 </div>
 

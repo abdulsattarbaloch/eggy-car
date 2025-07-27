@@ -304,16 +304,16 @@ export default function FAQsPage() {
               <CardHeader>
                 <CardTitle className="text-xl flex items-center space-x-2">
                   <HelpCircle className="h-5 w-5 text-orange-600" />
-                  <span>The game won't load. What should I do?</span>
+                  <span>The game won&apos;t load. What should I do?</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Try refreshing the page first. If that doesn't work, clear
-                  your browser cache and cookies, then reload the page. Make
-                  sure you have a stable internet connection and that JavaScript
-                  is enabled in your browser. The game works best on modern
-                  browsers like Chrome, Firefox, Safari, and Edge.
+                  Try refreshing the page first. If that doesn&apos;t work,
+                  clear your browser cache and cookies, then reload the page.
+                  Make sure you have a stable internet connection and that
+                  JavaScript is enabled in your browser. The game works best on
+                  modern browsers like Chrome, Firefox, Safari, and Edge.
                 </p>
               </CardContent>
             </Card>
