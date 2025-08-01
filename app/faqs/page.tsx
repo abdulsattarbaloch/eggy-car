@@ -1,5 +1,5 @@
-// faqs/page.tsx
-import { Metadata } from "next";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
 import {
   Card,
   CardContent,
@@ -7,21 +7,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import {
-  Car,
-  HelpCircle,
-  Gamepad2,
-  Trophy,
-  Coins,
-  Smartphone,
-  Shield,
-  Zap,
-} from "lucide-react";
+import { SITE_NAME, WEBSITE_URL, XHANDLE } from "@/data/contants";
+import { HelpCircle, Shield, Zap } from "lucide-react";
+import { Metadata } from "next";
 import Link from "next/link";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
 
 // SEO Metadata
 export const metadata: Metadata = {
@@ -39,26 +28,12 @@ export const metadata: Metadata = {
     "eggy car tips",
     "eggy car guide",
   ],
-  authors: [{ name: "Beedo Games" }],
-  creator: "Beedo Games",
-  publisher: "Beedo Games",
-  category: "Games",
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
+
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://your-domain.com/faqs",
-    siteName: "Eggy Car",
+    url: WEBSITE_URL,
+    siteName: SITE_NAME,
     title: "Eggy Car FAQs - Frequently Asked Questions & Game Help",
     description:
       "Find answers to common questions about Eggy Car gameplay, controls, features, and troubleshooting.",
@@ -74,26 +49,20 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@your-twitter-handle",
-    creator: "@your-twitter-handle",
+    site: XHANDLE,
     title: "Eggy Car FAQs - Frequently Asked Questions & Game Help",
     description:
       "Find answers to common questions about Eggy Car gameplay and features.",
     images: ["/twitter-image.jpg"],
-  },
-  alternates: {
-    canonical: "https://your-domain.com/faqs",
   },
 };
 
 export default function FAQsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-orange-50">
-      {/* Header */}
       <Navbar />
 
       <main className="max-w-6xl mx-auto px-4 py-8">
-        {/* Breadcrumb */}
         <div className="flex items-center space-x-2 text-sm text-gray-600 mb-8">
           <Link href="/" className="hover:text-orange-600 transition-colors">
             Home
@@ -102,57 +71,19 @@ export default function FAQsPage() {
           <span className="text-orange-600">FAQs</span>
         </div>
 
-        {/* Hero Section */}
         <section className="text-center mb-16">
-          <Badge
-            variant="secondary"
-            className="mb-4 bg-orange-100 text-orange-800 hover:bg-orange-200"
-          >
-            Need Help?
-          </Badge>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-600 via-red-500 to-pink-500 bg-clip-text text-transparent">
-            Frequently Asked Questions
+          <h1 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-600 via-red-500 to-pink-500 bg-clip-text text-transparent">
+            FAQs
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
             Find answers to the most common questions about Eggy Car gameplay,
             features, and troubleshooting. Can&apos;t find what you&apos;re
             looking for? Let us know!
           </p>
         </section>
 
-        {/* Quick Categories */}
-        <section className="mb-16">
-          <div className="grid md:grid-cols-4 gap-4">
-            <div className="text-center p-4 bg-white/60 backdrop-blur-sm rounded-lg border border-orange-100">
-              <Gamepad2 className="h-8 w-8 text-orange-600 mx-auto mb-2" />
-              <h3 className="font-semibold text-gray-800">Gameplay</h3>
-            </div>
-            <div className="text-center p-4 bg-white/60 backdrop-blur-sm rounded-lg border border-orange-100">
-              <Car className="h-8 w-8 text-orange-600 mx-auto mb-2" />
-              <h3 className="font-semibold text-gray-800">Cars & Unlocks</h3>
-            </div>
-            <div className="text-center p-4 bg-white/60 backdrop-blur-sm rounded-lg border border-orange-100">
-              <Smartphone className="h-8 w-8 text-orange-600 mx-auto mb-2" />
-              <h3 className="font-semibold text-gray-800">Technical</h3>
-            </div>
-            <div className="text-center p-4 bg-white/60 backdrop-blur-sm rounded-lg border border-orange-100">
-              <Trophy className="h-8 w-8 text-orange-600 mx-auto mb-2" />
-              <h3 className="font-semibold text-gray-800">Records & Scoring</h3>
-            </div>
-          </div>
-        </section>
-
         {/* General Gameplay FAQs */}
         <section className="mb-16">
-          <div className="flex items-center space-x-3 mb-8">
-            <div className="w-10 h-10 bg-gradient-to-br from-orange-400 to-red-500 rounded-lg flex items-center justify-center">
-              <Gamepad2 className="h-6 w-6 text-white" />
-            </div>
-            <h2 className="text-3xl font-bold text-gray-800">
-              General Gameplay
-            </h2>
-          </div>
-
           <div className="space-y-6">
             <Card className="bg-white/60 backdrop-blur-sm border border-orange-100">
               <CardHeader>
@@ -222,19 +153,6 @@ export default function FAQsPage() {
                 </p>
               </CardContent>
             </Card>
-          </div>
-        </section>
-
-        {/* Cars & Unlocks FAQs */}
-        <section className="mb-16">
-          <div className="flex items-center space-x-3 mb-8">
-            <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center">
-              <Car className="h-6 w-6 text-white" />
-            </div>
-            <h2 className="text-3xl font-bold text-gray-800">Cars & Unlocks</h2>
-          </div>
-
-          <div className="space-y-6">
             <Card className="bg-white/60 backdrop-blur-sm border border-orange-100">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center space-x-2">
@@ -285,21 +203,7 @@ export default function FAQsPage() {
                 </p>
               </CardContent>
             </Card>
-          </div>
-        </section>
 
-        {/* Technical FAQs */}
-        <section className="mb-16">
-          <div className="flex items-center space-x-3 mb-8">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center">
-              <Smartphone className="h-6 w-6 text-white" />
-            </div>
-            <h2 className="text-3xl font-bold text-gray-800">
-              Technical Support
-            </h2>
-          </div>
-
-          <div className="space-y-6">
             <Card className="bg-white/60 backdrop-blur-sm border border-orange-100">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center space-x-2">
@@ -368,21 +272,7 @@ export default function FAQsPage() {
                 </p>
               </CardContent>
             </Card>
-          </div>
-        </section>
 
-        {/* Records & Scoring FAQs */}
-        <section className="mb-16">
-          <div className="flex items-center space-x-3 mb-8">
-            <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center">
-              <Trophy className="h-6 w-6 text-white" />
-            </div>
-            <h2 className="text-3xl font-bold text-gray-800">
-              Records & Scoring
-            </h2>
-          </div>
-
-          <div className="space-y-6">
             <Card className="bg-white/60 backdrop-blur-sm border border-orange-100">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center space-x-2">
@@ -463,17 +353,12 @@ export default function FAQsPage() {
               <CardTitle className="text-3xl font-bold text-gray-800 mb-4">
                 Still Need Help?
               </CardTitle>
-              <CardDescription className="text-lg text-gray-600">
+              <CardDescription className="text-gray-600">
                 Can&apos;t find the answer you&apos;re looking for? We&apos;re
                 here to help!
               </CardDescription>
             </CardHeader>
             <CardContent className="text-center">
-              <p className="text-gray-600 mb-6">
-                If your question isn&apos;t answered here, feel free to reach
-                out to us. We&apos;re always happy to help players get the most
-                out of their Eggy Car experience.
-              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/how-to-use"
@@ -491,40 +376,6 @@ export default function FAQsPage() {
               </div>
             </CardContent>
           </Card>
-        </section>
-
-        <Separator className="my-12" />
-
-        {/* Popular Questions */}
-        <section className="text-center mb-16">
-          <h2 className="text-2xl font-bold mb-6 text-gray-800">
-            Most Popular Questions
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="p-4 bg-white/60 backdrop-blur-sm rounded-lg border border-orange-100">
-              <Coins className="h-8 w-8 text-orange-600 mx-auto mb-3" />
-              <h4 className="font-semibold text-gray-800 mb-2">
-                Coin Collection
-              </h4>
-              <p className="text-sm text-gray-600">
-                How to maximize coin collection during runs
-              </p>
-            </div>
-            <div className="p-4 bg-white/60 backdrop-blur-sm rounded-lg border border-orange-100">
-              <Car className="h-8 w-8 text-orange-600 mx-auto mb-3" />
-              <h4 className="font-semibold text-gray-800 mb-2">Best Cars</h4>
-              <p className="text-sm text-gray-600">
-                Which cars are best for different play styles
-              </p>
-            </div>
-            <div className="p-4 bg-white/60 backdrop-blur-sm rounded-lg border border-orange-100">
-              <Trophy className="h-8 w-8 text-orange-600 mx-auto mb-3" />
-              <h4 className="font-semibold text-gray-800 mb-2">High Scores</h4>
-              <p className="text-sm text-gray-600">
-                Tips for achieving record-breaking distances
-              </p>
-            </div>
-          </div>
         </section>
       </main>
 

@@ -1,16 +1,9 @@
-// about/page.tsx
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { SITE_NAME, WEBSITE_URL, XHANDLE } from "@/data/contants";
 import {
   ArrowLeft,
   Gamepad2,
@@ -23,7 +16,6 @@ import {
 import { Metadata } from "next";
 import Link from "next/link";
 
-// SEO Metadata
 export const metadata: Metadata = {
   title: "About Eggy Car - Learn About Our Physics Driving Game",
   description:
@@ -38,26 +30,12 @@ export const metadata: Metadata = {
     "game mission",
     "beedo games",
   ],
-  authors: [{ name: "Beedo Games" }],
-  creator: "Beedo Games",
-  publisher: "Beedo Games",
-  category: "Games",
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
+
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://your-domain.com/about",
-    siteName: "Eggy Car",
+    url: WEBSITE_URL,
+    siteName: SITE_NAME,
     title: "About Eggy Car - Learn About Our Physics Driving Game",
     description:
       "Discover the story behind Eggy Car, a fun physics-based driving game created to bring joy and challenge to players worldwide.",
@@ -73,26 +51,20 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@your-twitter-handle",
-    creator: "@your-twitter-handle",
+    site: XHANDLE,
     title: "About Eggy Car - Learn About Our Physics Driving Game",
     description:
       "Discover the story behind Eggy Car, a fun physics-based driving game.",
     images: ["/twitter-image.jpg"],
-  },
-  alternates: {
-    canonical: "https://your-domain.com/about",
   },
 };
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-orange-50">
-      {/* Header */}
       <Navbar />
 
       <main className="max-w-6xl mx-auto px-4 py-8">
-        {/* Breadcrumb */}
         <div className="flex items-center space-x-2 text-sm text-gray-600 mb-8">
           <Link href="/" className="hover:text-orange-600 transition-colors">
             Home
@@ -101,25 +73,17 @@ export default function AboutPage() {
           <span className="text-orange-600">About</span>
         </div>
 
-        {/* Hero Section */}
         <section className="text-center mb-16">
-          <Badge
-            variant="secondary"
-            className="mb-4 bg-orange-100 text-orange-800 hover:bg-orange-200"
-          >
-            Our Story
-          </Badge>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-600 via-red-500 to-pink-500 bg-clip-text text-transparent">
+          <h1 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-600 via-red-500 to-pink-500 bg-clip-text text-transparent leading-[140%]">
             About Eggy Car
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
             Born from a passion for physics-based gameplay and accessible
             gaming, Eggy Car combines simple controls with challenging mechanics
             to create an addictive driving experience.
           </p>
         </section>
 
-        {/* Mission Section */}
         <section className="mb-16">
           <Card className="bg-gradient-to-r from-orange-50 to-red-50 border-orange-200">
             <CardHeader className="text-center">
@@ -176,7 +140,6 @@ export default function AboutPage() {
           </Card>
         </section>
 
-        {/* The Game Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-gray-800">
@@ -225,72 +188,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Development Philosophy */}
-        <section className="mb-16">
-          <Card className="bg-gradient-to-r from-blue-50 to-purple-50 border-blue-200">
-            <CardHeader className="text-center">
-              <CardTitle className="text-3xl font-bold text-gray-800 mb-4">
-                Development Philosophy
-              </CardTitle>
-              <CardDescription className="text-lg text-gray-600">
-                The principles that guide every decision we make
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white font-bold text-sm">1</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800 mb-2">
-                      Player-First Design
-                    </h4>
-                    <p className="text-gray-600">
-                      Every feature is evaluated through the lens of player
-                      enjoyment. If it doesn&apos;t make the game more fun, it
-                      doesn&apos;t make it into the game.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white font-bold text-sm">2</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800 mb-2">
-                      Quality Over Quantity
-                    </h4>
-                    <p className="text-gray-600">
-                      We&apos;d rather perfect one amazing game than create
-                      dozens of mediocre ones. Every element is carefully
-                      crafted and thoroughly tested.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white font-bold text-sm">3</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800 mb-2">
-                      Community Feedback
-                    </h4>
-                    <p className="text-gray-600">
-                      Our players are our most valuable asset. We listen to
-                      feedback, implement suggestions, and continuously improve
-                      based on real player experiences.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </section>
-
-        {/* Stats Section */}
         <section className="mb-16">
           <Card className="bg-gradient-to-r from-yellow-50 to-orange-50 border-yellow-200">
             <CardContent className="py-12">
@@ -333,7 +230,6 @@ export default function AboutPage() {
           </Card>
         </section>
 
-        {/* Future Section */}
         <section className="mb-16">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold mb-4 text-gray-800">
@@ -362,7 +258,6 @@ export default function AboutPage() {
 
         <Separator className="my-12" />
 
-        {/* Contact Section */}
         <section className="text-center">
           <h2 className="text-2xl font-bold mb-6 text-gray-800">
             Get in Touch
@@ -379,7 +274,6 @@ export default function AboutPage() {
         </section>
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

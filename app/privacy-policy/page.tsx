@@ -1,10 +1,8 @@
-// privacy-policy/page.tsx
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { Database, Eye, Lock, Mail, Shield } from "lucide-react";
+import { SITE_NAME, WEBSITE_URL } from "@/data/contants";
+import { Database, Eye, Lock, Shield } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -23,39 +21,24 @@ export const metadata: Metadata = {
     "cookies policy",
     "beedo games privacy",
   ],
-  authors: [{ name: "Beedo Games" }],
-  creator: "Beedo Games",
-  publisher: "Beedo Games",
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
+
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://your-domain.com/privacy-policy",
-    siteName: "Eggy Car",
+    url: WEBSITE_URL,
+    siteName: SITE_NAME,
     title: "Eggy Car Privacy Policy - How We Protect Your Data",
     description:
       "Learn about Eggy Car's commitment to protecting your privacy and data while playing our game.",
-  },
-  alternates: {
-    canonical: "https://your-domain.com/privacy-policy",
   },
 };
 
 export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-orange-50">
-      {/* Header */}
       <Navbar />
 
       <main className="max-w-4xl mx-auto px-4 py-8">
-        {/* Breadcrumb */}
         <div className="flex items-center space-x-2 text-sm text-gray-600 mb-8">
           <Link href="/" className="hover:text-orange-600 transition-colors">
             Home
@@ -64,15 +47,8 @@ export default function PrivacyPolicyPage() {
           <span className="text-orange-600">Privacy Policy</span>
         </div>
 
-        {/* Hero Section */}
         <section className="text-center mb-16">
-          <Badge
-            variant="secondary"
-            className="mb-4 bg-orange-100 text-orange-800 hover:bg-orange-200"
-          >
-            Your Privacy Matters
-          </Badge>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-600 via-red-500 to-pink-500 bg-clip-text text-transparent">
+          <h1 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-600 via-red-500 to-pink-500 bg-clip-text text-transparent">
             Privacy Policy
           </h1>
           <p className="text-lg text-gray-600 mb-4 leading-relaxed">
@@ -85,7 +61,6 @@ export default function PrivacyPolicyPage() {
           </p>
         </section>
 
-        {/* Information We Collect */}
         <section className="mb-12">
           <Card className="bg-white/60 backdrop-blur-sm border border-orange-100">
             <CardHeader>
@@ -150,7 +125,6 @@ export default function PrivacyPolicyPage() {
           </Card>
         </section>
 
-        {/* How We Use Information */}
         <section className="mb-12">
           <Card className="bg-white/60 backdrop-blur-sm border border-orange-100">
             <CardHeader>
@@ -229,7 +203,6 @@ export default function PrivacyPolicyPage() {
           </Card>
         </section>
 
-        {/* Data Protection */}
         <section className="mb-12">
           <Card className="bg-white/60 backdrop-blur-sm border border-orange-100">
             <CardHeader>
@@ -278,7 +251,6 @@ export default function PrivacyPolicyPage() {
           </Card>
         </section>
 
-        {/* Your Rights */}
         <section className="mb-12">
           <Card className="bg-gradient-to-r from-orange-50 to-red-50 border-orange-200">
             <CardHeader>
@@ -328,7 +300,6 @@ export default function PrivacyPolicyPage() {
           </Card>
         </section>
 
-        {/* Children's Privacy & International Users */}
         <section className="mb-12">
           <div className="grid md:grid-cols-2 gap-6">
             <Card className="bg-white/60 backdrop-blur-sm border border-orange-100">
@@ -375,7 +346,6 @@ export default function PrivacyPolicyPage() {
           </div>
         </section>
 
-        {/* Updates to Policy */}
         <section className="mb-12">
           <Card className="bg-white/60 backdrop-blur-sm border border-orange-100">
             <CardHeader>
@@ -416,74 +386,8 @@ export default function PrivacyPolicyPage() {
             </CardContent>
           </Card>
         </section>
-
-        <Separator className="my-12" />
-
-        {/* Contact Section */}
-        <section className="text-center mb-12">
-          <Card className="bg-gradient-to-r from-blue-50 to-purple-50 border-blue-200">
-            <CardHeader>
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="h-8 w-8 text-white" />
-              </div>
-              <CardTitle className="text-3xl font-bold text-gray-800 mb-4">
-                Questions About Privacy?
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                If you have any questions about this privacy policy, our data
-                practices, or your privacy rights, please don&apos;t hesitate to
-                contact us.
-              </p>
-
-              <div className="space-y-2 text-gray-600">
-                <p>
-                  <strong>Email:</strong> privacy@beedogames.com
-                </p>
-                <p>
-                  <strong>Response Time:</strong> We aim to respond within 48
-                  hours
-                </p>
-              </div>
-
-              <p className="text-sm text-gray-500 mt-6">
-                This privacy policy is effective as of January 1, 2025, and
-                applies to all users of Eggy Car.
-              </p>
-            </CardContent>
-          </Card>
-        </section>
-
-        {/* Related Links */}
-        <section className="text-center">
-          <h3 className="text-xl font-bold text-gray-800 mb-4">
-            Related Information
-          </h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/terms-of-service"
-              className="text-orange-600 hover:text-orange-700 underline"
-            >
-              Terms of Service
-            </Link>
-            <Link
-              href="/faqs"
-              className="text-orange-600 hover:text-orange-700 underline"
-            >
-              Frequently Asked Questions
-            </Link>
-            <Link
-              href="/how-to-use"
-              className="text-orange-600 hover:text-orange-700 underline"
-            >
-              How to Play
-            </Link>
-          </div>
-        </section>
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

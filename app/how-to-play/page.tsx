@@ -1,25 +1,22 @@
-// how-to-use/page.tsx
-import { Metadata } from "next";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { SITE_NAME, WEBSITE_URL, XHANDLE } from "@/data/contants";
 import {
+  ArrowRight,
   Car,
+  Coins,
   Play,
-  Gamepad2,
+  Settings,
+  Star,
   Target,
   Trophy,
-  Settings,
-  Zap,
-  Star,
-  ArrowRight,
-  Coins,
-  RotateCcw,
   Volume2,
+  Zap,
 } from "lucide-react";
+import { Metadata } from "next";
 import Link from "next/link";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
 
 // SEO Metadata
 export const metadata: Metadata = {
@@ -36,39 +33,41 @@ export const metadata: Metadata = {
     "game instructions",
     "beedo games guide",
   ],
-  authors: [{ name: "Beedo Games" }],
-  creator: "Beedo Games",
-  publisher: "Beedo Games",
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
+
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://your-domain.com/how-to-use",
-    siteName: "Eggy Car",
+    url: WEBSITE_URL,
+    siteName: SITE_NAME,
     title: "How to Play Eggy Car - Complete Guide and Tips",
     description:
       "Master Eggy Car with our complete gameplay guide, tips, and tricks.",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Eggy Car FAQs - Game Help and Questions",
+        type: "image/jpeg",
+      },
+    ],
   },
-  alternates: {
-    canonical: "https://your-domain.com/how-to-use",
+  twitter: {
+    card: "summary_large_image",
+    site: XHANDLE,
+    title: "Eggy Car FAQs - Frequently Asked Questions & Game Help",
+    description:
+      "Find answers to common questions about Eggy Car gameplay and features.",
+    images: ["/twitter-image.jpg"],
   },
 };
 
 export default function HowToUsePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
-      {/* Header */}
       <Navbar />
 
       <main className="max-w-4xl mx-auto px-4 py-8">
-        {/* Breadcrumb */}
         <div className="flex items-center space-x-2 text-sm text-gray-600 mb-8">
           <Link href="/" className="hover:text-orange-600 transition-colors">
             Home
@@ -77,15 +76,8 @@ export default function HowToUsePage() {
           <span className="text-orange-600">How to Play</span>
         </div>
 
-        {/* Hero Section */}
         <section className="text-center mb-16">
-          <Badge
-            variant="secondary"
-            className="mb-4 bg-green-100 text-green-800 hover:bg-green-200"
-          >
-            Game Guide
-          </Badge>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-600 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+          <h1 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-600 via-red-500 to-pink-500 bg-clip-text text-transparent leading-[140%]">
             How to Play Eggy Car
           </h1>
           <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
@@ -159,126 +151,6 @@ export default function HowToUsePage() {
         </section>
 
         {/* Game Controls */}
-        <section className="mb-12">
-          <Card className="bg-white/60 backdrop-blur-sm border border-green-100">
-            <CardHeader>
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center">
-                  <Gamepad2 className="h-6 w-6 text-white" />
-                </div>
-                <CardTitle className="text-2xl text-gray-800">
-                  Game Controls
-                </CardTitle>
-              </div>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <p className="text-gray-600">
-                Master these simple but essential controls to become an Eggy Car
-                champion:
-              </p>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-4">
-                  <h4 className="text-lg font-semibold text-gray-800 mb-3">
-                    Keyboard Controls
-                  </h4>
-
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                      <div className="w-8 h-8 bg-blue-500 text-white rounded flex items-center justify-center text-sm font-bold">
-                        ↑
-                      </div>
-                      <div>
-                        <p className="font-medium text-gray-800">
-                          Up Arrow / W
-                        </p>
-                        <p className="text-gray-600 text-sm">
-                          Accelerate forward
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                      <div className="w-8 h-8 bg-red-500 text-white rounded flex items-center justify-center text-sm font-bold">
-                        ↓
-                      </div>
-                      <div>
-                        <p className="font-medium text-gray-800">
-                          Down Arrow / S
-                        </p>
-                        <p className="text-gray-600 text-sm">Brake / Reverse</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                      <div className="w-8 h-8 bg-green-500 text-white rounded flex items-center justify-center text-sm font-bold">
-                        ←
-                      </div>
-                      <div>
-                        <p className="font-medium text-gray-800">
-                          Left Arrow / A
-                        </p>
-                        <p className="text-gray-600 text-sm">Lean backward</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                      <div className="w-8 h-8 bg-purple-500 text-white rounded flex items-center justify-center text-sm font-bold">
-                        →
-                      </div>
-                      <div>
-                        <p className="font-medium text-gray-800">
-                          Right Arrow / D
-                        </p>
-                        <p className="text-gray-600 text-sm">Lean forward</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  <h4 className="text-lg font-semibold text-gray-800 mb-3">
-                    Additional Controls
-                  </h4>
-
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                      <div className="w-8 h-8 bg-orange-500 text-white rounded flex items-center justify-center">
-                        <RotateCcw className="w-4 h-4" />
-                      </div>
-                      <div>
-                        <p className="font-medium text-gray-800">R Key</p>
-                        <p className="text-gray-600 text-sm">Restart level</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                      <div className="w-8 h-8 bg-indigo-500 text-white rounded flex items-center justify-center">
-                        <Volume2 className="w-4 h-4" />
-                      </div>
-                      <div>
-                        <p className="font-medium text-gray-800">M Key</p>
-                        <p className="text-gray-600 text-sm">
-                          Mute/Unmute sound
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                      <div className="w-8 h-8 bg-gray-500 text-white rounded flex items-center justify-center text-sm font-bold">
-                        ⎵
-                      </div>
-                      <div>
-                        <p className="font-medium text-gray-800">Spacebar</p>
-                        <p className="text-gray-600 text-sm">Pause game</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </section>
 
         {/* Game Objective */}
         <section className="mb-12">
@@ -436,7 +308,6 @@ export default function HowToUsePage() {
           </Card>
         </section>
 
-        {/* Game Features */}
         <section className="mb-12">
           <Card className="bg-white/60 backdrop-blur-sm border border-green-100">
             <CardHeader>
@@ -586,7 +457,6 @@ export default function HowToUsePage() {
 
         <Separator className="my-12" />
 
-        {/* Getting Help */}
         <section className="text-center mb-12">
           <Card className="bg-gradient-to-r from-green-50 to-blue-50 border-green-200">
             <CardHeader>
@@ -624,33 +494,6 @@ export default function HowToUsePage() {
               </p>
             </CardContent>
           </Card>
-        </section>
-
-        {/* Related Links */}
-        <section className="text-center">
-          <h3 className="text-xl font-bold text-gray-800 mb-4">
-            More Information
-          </h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/privacy-policy"
-              className="text-green-600 hover:text-green-700 underline"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href="/terms-of-service"
-              className="text-green-600 hover:text-green-700 underline"
-            >
-              Terms of Service
-            </Link>
-            <Link
-              href="/faqs"
-              className="text-green-600 hover:text-green-700 underline"
-            >
-              Frequently Asked Questions
-            </Link>
-          </div>
         </section>
       </main>
 

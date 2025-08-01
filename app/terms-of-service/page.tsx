@@ -1,23 +1,19 @@
-// terms-of-service/page.tsx
-import { Metadata } from "next";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import {
-  Car,
-  FileText,
-  Shield,
-  AlertCircle,
-  Users,
-  Gavel,
-  Mail,
-  CheckCircle,
-} from "lucide-react";
-import Link from "next/link";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { SITE_NAME, WEBSITE_URL } from "@/data/contants";
+import {
+  AlertCircle,
+  Car,
+  CheckCircle,
+  FileText,
+  Gavel,
+  Shield,
+  Users,
+} from "lucide-react";
+import { Metadata } from "next";
+import Link from "next/link";
 
-// SEO Metadata
 export const metadata: Metadata = {
   title: "Eggy Car Terms of Service - Game Rules and Guidelines",
   description:
@@ -31,27 +27,14 @@ export const metadata: Metadata = {
     "gameplay guidelines",
     "beedo games terms",
   ],
-  authors: [{ name: "Beedo Games" }],
-  creator: "Beedo Games",
-  publisher: "Beedo Games",
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
+
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://your-domain.com/terms-of-service",
-    siteName: "Eggy Car",
+    url: WEBSITE_URL,
+    siteName: SITE_NAME,
     title: "Eggy Car Terms of Service - Game Rules and Guidelines",
     description: "Understanding the terms and conditions for playing Eggy Car.",
-  },
-  alternates: {
-    canonical: "https://your-domain.com/terms-of-service",
   },
 };
 
@@ -61,7 +44,6 @@ export default function TermsOfServicePage() {
       <Navbar />
 
       <main className="max-w-4xl mx-auto px-4 py-8">
-        {/* Breadcrumb */}
         <div className="flex items-center space-x-2 text-sm text-gray-600 mb-8">
           <Link href="/" className="hover:text-orange-600 transition-colors">
             Home
@@ -70,15 +52,8 @@ export default function TermsOfServicePage() {
           <span className="text-orange-600">Terms of Service</span>
         </div>
 
-        {/* Hero Section */}
         <section className="text-center mb-16">
-          <Badge
-            variant="secondary"
-            className="mb-4 bg-blue-100 text-blue-800 hover:bg-blue-200"
-          >
-            Legal Agreement
-          </Badge>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          <h1 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-600 via-red-500 to-pink-500 bg-clip-text text-transparent">
             Terms of Service
           </h1>
           <p className="text-lg text-gray-600 mb-4 leading-relaxed">
@@ -90,7 +65,6 @@ export default function TermsOfServicePage() {
           </p>
         </section>
 
-        {/* Acceptance of Terms */}
         <section className="mb-12">
           <Card className="bg-white/60 backdrop-blur-sm border border-blue-100">
             <CardHeader>
@@ -109,27 +83,10 @@ export default function TermsOfServicePage() {
                 that you have read, understood, and agree to be bound by these
                 Terms of Service and our Privacy Policy.
               </p>
-
-              <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
-                <div className="flex items-start space-x-3">
-                  <AlertCircle className="h-5 w-5 text-orange-500 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="text-orange-800 font-medium mb-1">
-                      Important Notice
-                    </p>
-                    <p className="text-orange-700 text-sm">
-                      If you do not agree to these terms, please do not use Eggy
-                      Car. These terms may be updated from time to time, and
-                      continued use constitutes acceptance of any changes.
-                    </p>
-                  </div>
-                </div>
-              </div>
             </CardContent>
           </Card>
         </section>
 
-        {/* Game Usage */}
         <section className="mb-12">
           <Card className="bg-white/60 backdrop-blur-sm border border-blue-100">
             <CardHeader>
@@ -181,7 +138,6 @@ export default function TermsOfServicePage() {
           </Card>
         </section>
 
-        {/* User Conduct */}
         <section className="mb-12">
           <Card className="bg-white/60 backdrop-blur-sm border border-blue-100">
             <CardHeader>
@@ -232,7 +188,6 @@ export default function TermsOfServicePage() {
           </Card>
         </section>
 
-        {/* Intellectual Property */}
         <section className="mb-12">
           <Card className="bg-white/60 backdrop-blur-sm border border-blue-100">
             <CardHeader>
@@ -282,7 +237,6 @@ export default function TermsOfServicePage() {
           </Card>
         </section>
 
-        {/* Service Availability */}
         <section className="mb-12">
           <Card className="bg-gradient-to-r from-yellow-50 to-orange-50 border-yellow-200">
             <CardHeader>
@@ -327,7 +281,6 @@ export default function TermsOfServicePage() {
           </Card>
         </section>
 
-        {/* Disclaimers and Limitations */}
         <section className="mb-12">
           <Card className="bg-white/60 backdrop-blur-sm border border-blue-100">
             <CardHeader>
@@ -377,7 +330,6 @@ export default function TermsOfServicePage() {
           </Card>
         </section>
 
-        {/* Governing Law */}
         <section className="mb-12">
           <Card className="bg-white/60 backdrop-blur-sm border border-blue-100">
             <CardHeader>
@@ -425,7 +377,6 @@ export default function TermsOfServicePage() {
           </Card>
         </section>
 
-        {/* Changes to Terms */}
         <section className="mb-12">
           <Card className="bg-white/60 backdrop-blur-sm border border-blue-100">
             <CardHeader>
@@ -465,73 +416,7 @@ export default function TermsOfServicePage() {
             </CardContent>
           </Card>
         </section>
-
-        <Separator className="my-12" />
-
-        {/* Contact Section */}
-        <section className="text-center mb-12">
-          <Card className="bg-gradient-to-r from-blue-50 to-purple-50 border-blue-200">
-            <CardHeader>
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="h-8 w-8 text-white" />
-              </div>
-              <CardTitle className="text-3xl font-bold text-gray-800 mb-4">
-                Questions About These Terms?
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                If you have questions about these Terms of Service or need
-                clarification on any aspect, please contact us.
-              </p>
-
-              <div className="space-y-2 text-gray-600">
-                <p>
-                  <strong>Email:</strong> legal@beedogames.com
-                </p>
-                <p>
-                  <strong>Response Time:</strong> We aim to respond within 48-72
-                  hours
-                </p>
-              </div>
-
-              <p className="text-sm text-gray-500 mt-6">
-                These terms are effective as of January 1, 2025, and apply to
-                all users of Eggy Car.
-              </p>
-            </CardContent>
-          </Card>
-        </section>
-
-        {/* Related Links */}
-        <section className="text-center">
-          <h3 className="text-xl font-bold text-gray-800 mb-4">
-            Related Information
-          </h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/privacy-policy"
-              className="text-blue-600 hover:text-blue-700 underline"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href="/faqs"
-              className="text-blue-600 hover:text-blue-700 underline"
-            >
-              Frequently Asked Questions
-            </Link>
-            <Link
-              href="/how-to-use"
-              className="text-blue-600 hover:text-blue-700 underline"
-            >
-              How to Play
-            </Link>
-          </div>
-        </section>
       </main>
-
-      {/* Footer */}
       <Footer />
     </div>
   );
