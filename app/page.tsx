@@ -1,6 +1,8 @@
 import EggyCarArticle from "@/components/article";
 import Footer from "@/components/footer";
+import GameIframe from "@/components/game-iframe";
 import Navbar from "@/components/navbar";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { SITE_NAME, WEBSITE_URL, XHANDLE } from "@/data/contants";
 import { Coins, Play, Trophy, Zap } from "lucide-react";
@@ -80,12 +82,7 @@ export default function GamePage() {
             </CardHeader>
             <CardContent>
               <div className="aspect-video  rounded-lg">
-                <iframe
-                  className="w-full h-full rounded-sm overflow-hidden"
-                  title="Eggy Car Unblocked - Game Iframe"
-                  id="game-iframe"
-                  src="https://eggycarofficial.com/game/d18030e3-35a6-4846-a4a5-ca65e5e0aa1e/index.html?game_id=9f1b16bc-cacf-4309-8d46-2ff2d6671e12&amp;game_version_id=d18030e3-35a6-4846-a4a5-ca65e5e0aa1e&amp;referrer="
-                ></iframe>
+                <GameIframe />
               </div>
             </CardContent>
           </Card>
