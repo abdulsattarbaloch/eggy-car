@@ -12,12 +12,14 @@ import {
   Users,
 } from "lucide-react";
 import { Metadata } from "next";
-import Link from "next/link";
+
+const seoTitle = "Terms of Service - EggyCar";
+const seoDescription =
+  "Read the Terms and Conditions for Eggy Car Unblocked. Learn about your rights, responsibilities, and the rules for using our website and game.";
 
 export const metadata: Metadata = {
-  title: "Eggy Car Terms of Service - Game Rules and Guidelines",
-  description:
-    "Read Eggy Car's terms of service to understand the rules, guidelines, and legal terms for playing our physics driving game.",
+  title: seoTitle,
+  description: seoDescription,
   keywords: [
     "eggy car terms of service",
     "terms of service",
@@ -25,7 +27,6 @@ export const metadata: Metadata = {
     "user agreement",
     "legal terms",
     "gameplay guidelines",
-    "beedo games terms",
   ],
 
   openGraph: {
@@ -33,8 +34,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: WEBSITE_URL,
     siteName: SITE_NAME,
-    title: "Eggy Car Terms of Service - Game Rules and Guidelines",
-    description: "Understanding the terms and conditions for playing Eggy Car.",
+    title: seoTitle,
+    description: seoDescription,
   },
 };
 
@@ -44,14 +45,6 @@ export default function TermsOfServicePage() {
       <Navbar />
 
       <main className="max-w-4xl mx-auto px-4 py-8">
-        <div className="flex items-center space-x-2 text-sm text-gray-600 mb-8">
-          <Link href="/" className="hover:text-orange-600 transition-colors">
-            Home
-          </Link>
-          <span>/</span>
-          <span className="text-orange-600">Terms of Service</span>
-        </div>
-
         <section className="text-center mb-16">
           <h1 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-600 via-red-500 to-pink-500 bg-clip-text text-transparent">
             Terms of Service

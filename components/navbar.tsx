@@ -23,7 +23,7 @@ export default function Navbar() {
             <Car className="h-6 w-6 text-white" />
           </div>
           <p className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
-            Eggy Car
+            EggyCar
           </p>
         </Link>
 

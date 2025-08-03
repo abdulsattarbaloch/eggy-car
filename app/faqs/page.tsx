@@ -13,10 +13,12 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 // SEO Metadata
+const seoTitle = "FAQs - EggyCar";
+const seoDescription =
+  "Find answers to common questions about Eggy Car Unblocked. Visit our FAQ page for help with gameplay, controls, devices, and more.";
 export const metadata: Metadata = {
-  title: "Eggy Car FAQs - Frequently Asked Questions & Game Help",
-  description:
-    "Find answers to common questions about Eggy Car. Learn about gameplay, controls, car unlocks, troubleshooting, and more in our comprehensive FAQ section.",
+  title: seoTitle,
+  description: seoDescription,
   keywords: [
     "eggy car faqs",
     "eggy car help",
@@ -24,9 +26,7 @@ export const metadata: Metadata = {
     "how to play eggy car",
     "eggy car controls",
     "eggy car cars unlock",
-    "eggy car troubleshooting",
     "eggy car tips",
-    "eggy car guide",
   ],
 
   openGraph: {
@@ -34,15 +34,14 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: WEBSITE_URL,
     siteName: SITE_NAME,
-    title: "Eggy Car FAQs - Frequently Asked Questions & Game Help",
-    description:
-      "Find answers to common questions about Eggy Car gameplay, controls, features, and troubleshooting.",
+    title: seoTitle,
+    description: seoDescription,
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Eggy Car FAQs - Game Help and Questions",
+        alt: "EggyCar faqs",
         type: "image/jpeg",
       },
     ],
@@ -50,9 +49,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: XHANDLE,
-    title: "Eggy Car FAQs - Frequently Asked Questions & Game Help",
-    description:
-      "Find answers to common questions about Eggy Car gameplay and features.",
+    title: seoTitle,
+    description: seoDescription,
     images: ["/twitter-image.jpg"],
   },
 };
@@ -63,14 +61,6 @@ export default function FAQsPage() {
       <Navbar />
 
       <main className="max-w-6xl mx-auto px-4 py-8">
-        <div className="flex items-center space-x-2 text-sm text-gray-600 mb-8">
-          <Link href="/" className="hover:text-orange-600 transition-colors">
-            Home
-          </Link>
-          <span>/</span>
-          <span className="text-orange-600">FAQs</span>
-        </div>
-
         <section className="text-center mb-16">
           <h1 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-600 via-red-500 to-pink-500 bg-clip-text text-transparent">
             FAQs

@@ -10,6 +10,18 @@ export default function GameIframe() {
     if (iframe) {
       if (iframe.requestFullscreen) {
         iframe.requestFullscreen();
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      } else if ((iframe as any).mozRequestFullScreen) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (iframe as any).mozRequestFullScreen();
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      } else if ((iframe as any).webkitRequestFullscreen) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (iframe as any).webkitRequestFullscreen();
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      } else if ((iframe as any).msRequestFullscreen) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (iframe as any).msRequestFullscreen();
       }
     }
   };
@@ -21,10 +33,10 @@ export default function GameIframe() {
         className="w-full h-full rounded-sm overflow-hidden"
         title="Eggy Car Unblocked - Game Iframe"
         id="game-iframe"
-        src="https://eggycarofficial.com/game/d18030e3-35a6-4846-a4a5-ca65e5e0aa1e/index.html?game_id=9f1b16bc-cacf-4309-8d46-2ff2d6671e12&amp;game_version_id=d18030e3-35a6-4846-a4a5-ca65e5e0aa1e&amp;referrer="
+        src="https://eggycar2.io/eggy-car.embed"
       ></iframe>
       <div className="text-center flex items-center justify-center mt-6">
-        <Button>Viw Full Screen</Button>
+        <Button onClick={handleFullscreen}>Play Full Screen</Button>
       </div>
     </>
   );

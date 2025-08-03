@@ -4,13 +4,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { SITE_NAME, WEBSITE_URL } from "@/data/contants";
 import { Database, Eye, Lock, Shield } from "lucide-react";
 import { Metadata } from "next";
-import Link from "next/link";
 
 // SEO Metadata
+const seoTitle = "Privacy Policy- EggyCar";
+const seoDescription =
+  "Read the Privacy Policy for Eggy Car Unblocked. Learn how we collect, use, and protect your data when you play our free online game.";
 export const metadata: Metadata = {
-  title: "Eggy Car Privacy Policy - How We Protect Your Data",
-  description:
-    "Read Eggy Car's privacy policy to understand how we collect, use, and protect your personal information while you play our physics driving game.",
+  title: seoTitle,
+  description: seoDescription,
   keywords: [
     "eggy car privacy policy",
     "privacy policy",
@@ -19,7 +20,6 @@ export const metadata: Metadata = {
     "game privacy",
     "data collection",
     "cookies policy",
-    "beedo games privacy",
   ],
 
   openGraph: {
@@ -27,9 +27,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: WEBSITE_URL,
     siteName: SITE_NAME,
-    title: "Eggy Car Privacy Policy - How We Protect Your Data",
-    description:
-      "Learn about Eggy Car's commitment to protecting your privacy and data while playing our game.",
+    title: seoTitle,
+    description: seoDescription,
   },
 };
 
@@ -39,14 +38,6 @@ export default function PrivacyPolicyPage() {
       <Navbar />
 
       <main className="max-w-4xl mx-auto px-4 py-8">
-        <div className="flex items-center space-x-2 text-sm text-gray-600 mb-8">
-          <Link href="/" className="hover:text-orange-600 transition-colors">
-            Home
-          </Link>
-          <span>/</span>
-          <span className="text-orange-600">Privacy Policy</span>
-        </div>
-
         <section className="text-center mb-16">
           <h1 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-600 via-red-500 to-pink-500 bg-clip-text text-transparent">
             Privacy Policy

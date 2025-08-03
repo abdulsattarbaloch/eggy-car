@@ -19,19 +19,18 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 // SEO Metadata
+const seoTitle = "How to Play - EggyCar";
+const seoDescription = "";
 export const metadata: Metadata = {
-  title: "How to Play Eggy Car - Complete Guide and Tips",
+  title: "How to Play - EggyCar",
   description:
-    "Learn how to play Eggy Car with our comprehensive guide. Master the controls, discover tips and tricks, and become a pro at this physics driving game.",
+    "Eggy Car Unblocked is your go-to game for fun and skill! Play instantly online without ads, installs, or restrictions.",
   keywords: [
     "how to play eggy car",
     "eggy car guide",
     "eggy car controls",
     "eggy car tips",
-    "physics driving game guide",
     "eggy car tutorial",
-    "game instructions",
-    "beedo games guide",
   ],
 
   openGraph: {
@@ -39,15 +38,14 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: WEBSITE_URL,
     siteName: SITE_NAME,
-    title: "How to Play Eggy Car - Complete Guide and Tips",
-    description:
-      "Master Eggy Car with our complete gameplay guide, tips, and tricks.",
+    title: seoTitle,
+    description: seoDescription,
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Eggy Car FAQs - Game Help and Questions",
+        alt: "Eggy Car How to Play",
         type: "image/jpeg",
       },
     ],
@@ -55,9 +53,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: XHANDLE,
-    title: "Eggy Car FAQs - Frequently Asked Questions & Game Help",
-    description:
-      "Find answers to common questions about Eggy Car gameplay and features.",
+    title: seoTitle,
+    description: seoDescription,
     images: ["/twitter-image.jpg"],
   },
 };
@@ -68,14 +65,6 @@ export default function HowToUsePage() {
       <Navbar />
 
       <main className="max-w-4xl mx-auto px-4 py-8">
-        <div className="flex items-center space-x-2 text-sm text-gray-600 mb-8">
-          <Link href="/" className="hover:text-orange-600 transition-colors">
-            Home
-          </Link>
-          <span>/</span>
-          <span className="text-orange-600">How to Play</span>
-        </div>
-
         <section className="text-center mb-16">
           <h1 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-600 via-red-500 to-pink-500 bg-clip-text text-transparent leading-[140%]">
             How to Play Eggy Car

@@ -16,19 +16,18 @@ import {
 import { Metadata } from "next";
 import Link from "next/link";
 
+const seoTitle = "About - EggyCar";
+const seoDescription =
+  "Discover the story behind Eggy Car, a fun physics-based driving game. Learn about our mission to create engaging, accessible browser games for players worldwide.";
+
 export const metadata: Metadata = {
-  title: "About Eggy Car - Learn About Our Physics Driving Game",
-  description:
-    "Discover the story behind Eggy Car, a fun physics-based driving game. Learn about our mission to create engaging, accessible browser games for players worldwide.",
+  title: seoTitle,
+  description: seoDescription,
   keywords: [
     "about eggy car",
     "eggy car story",
-    "physics driving game",
-    "game development",
-    "browser games",
     "free online games",
     "game mission",
-    "beedo games",
   ],
 
   openGraph: {
@@ -36,15 +35,14 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: WEBSITE_URL,
     siteName: SITE_NAME,
-    title: "About Eggy Car - Learn About Our Physics Driving Game",
-    description:
-      "Discover the story behind Eggy Car, a fun physics-based driving game created to bring joy and challenge to players worldwide.",
+    title: seoTitle,
+    description: seoDescription,
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "About Eggy Car - Physics Driving Game",
+        alt: "About Eggy Car",
         type: "image/jpeg",
       },
     ],
@@ -52,9 +50,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: XHANDLE,
-    title: "About Eggy Car - Learn About Our Physics Driving Game",
-    description:
-      "Discover the story behind Eggy Car, a fun physics-based driving game.",
+    title: seoTitle,
+    description: seoDescription,
     images: ["/twitter-image.jpg"],
   },
 };
@@ -65,14 +62,6 @@ export default function AboutPage() {
       <Navbar />
 
       <main className="max-w-6xl mx-auto px-4 py-8">
-        <div className="flex items-center space-x-2 text-sm text-gray-600 mb-8">
-          <Link href="/" className="hover:text-orange-600 transition-colors">
-            Home
-          </Link>
-          <span>/</span>
-          <span className="text-orange-600">About</span>
-        </div>
-
         <section className="text-center mb-16">
           <h1 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-600 via-red-500 to-pink-500 bg-clip-text text-transparent leading-[140%]">
             About Eggy Car

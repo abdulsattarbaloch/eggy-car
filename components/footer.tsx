@@ -1,5 +1,4 @@
 import { Car } from "lucide-react";
-import { Separator } from "./ui/separator";
 import Link from "next/link";
 
 export default function Footer() {
@@ -13,10 +12,11 @@ export default function Footer() {
               <div className="w-8 h-8 bg-gradient-to-br from-orange-400 to-red-500 rounded-lg flex items-center justify-center">
                 <Car className="h-5 w-5 text-white" />
               </div>
-              <h4 className="text-xl font-bold">Eggy Car</h4>
+              <h4 className="text-xl font-bold">EggyCar</h4>
             </div>
             <p className="text-gray-400 text-sm max-w-[250px]">
-              Drive far, collect coins, and don&apos;t drop the egg!
+              Eggy Car Unblocked is your go-to game for fun and skill! Play
+              instantly online without ads, installs, or restrictions.
             </p>
           </div>
 
@@ -70,12 +70,6 @@ export default function Footer() {
             </nav>
           </div>
         </div>
-      </div>
-      <Separator className="max-w-6xl mx-auto w-full opacity-10 mt-10" />
-      <div className="pt-6">
-        <p className="text-sm text-gray-500 text-center">
-          Remember to share your high-score and challenge your friends!
-        </p>
       </div>
     </footer>
   );
