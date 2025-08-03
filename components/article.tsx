@@ -135,7 +135,7 @@ export default function EggyCarArticle() {
         </h3>
 
         <p className=" text-gray-700 mb-6  leading-relaxed">
-          The main objective in the Eggy car is to drive the car as long as a
+          The main objective in the Car eggy is to drive the car as long as a
           player can without falling off the egg. Players drive the car to
           collect coins more and more to get new animated unblocked cars for
           better play. Players beat their own scores or others to get the best
@@ -171,7 +171,7 @@ export default function EggyCarArticle() {
         </h3>
 
         <p className=" text-gray-700 mb-6  leading-relaxed">
-          Eggy car is simply played on all web browsers, like Cool Math Games.
+          EggyCar is simply played on all web browsers, like Cool Math Games.
           Play online EggyCar play free without downloading.
         </p>
 
